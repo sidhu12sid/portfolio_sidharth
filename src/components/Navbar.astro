@@ -1,0 +1,21 @@
+---
+const links = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Contact", href: "#contact" },
+];
+---
+
+<nav class="sticky top-0 z-50 h-18 bg-white shadow">
+  <div class="container mx-auto flex justify-between items-center h-full">
+    <a href="/" class="text-xl font-bold">L</a>    
+    <ul class="flex space-x-6">
+        {links.map(link => (
+            <li>
+                <a href={link.href} class="hover:text-gray-200">{link.name}</a>
+            </li>
+        ))}
+    </ul>
+  </div>
+</nav>
